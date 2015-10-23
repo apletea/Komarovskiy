@@ -11,7 +11,7 @@ using std::setfill;
 using std::setprecision;
 using std::fixed;
 using std::right;
-
+// Покажите к чему стремится отношение соседних чисел Фибоначчи.
 int main()
 {  setlocale(LC_ALL,"Russian");
    double mas[40];
