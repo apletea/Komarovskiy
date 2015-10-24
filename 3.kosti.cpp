@@ -14,8 +14,8 @@ int main()
     cout << "Введите 1 чтобы играть" << endl;
     cin>>a;
         if (a==1){
-            b=rand()%5+1;
-            c=rand()%5+1;
+            b=rand()%6+1;
+            c=rand()%6+1;
             cout<<"Ваш бросок"<<endl;
                 if (b==1) {
                     cout<<"-----"<<endl;
@@ -69,8 +69,8 @@ int main()
                     cout<<"-o-o-"<<endl;}
                 res1=b+c;
                 cout<<"Ваш результат:  "<<res1<<endl;
-                b=rand()%5+1;
-                c=rand()%5+1;
+                b=rand()%6+1;
+                c=rand()%6+1;
                 if (b==1) {
                     cout<<"-----"<<endl;
                     cout<<"--o--"<<endl;
