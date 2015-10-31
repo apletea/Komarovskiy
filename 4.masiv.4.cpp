@@ -1,6 +1,6 @@
 #include <iostream>
 #include <clocale>
-//Вывести кол-во положительных и количество отрицательных элементов в массиве А.
+//Вывести максимум и минимум в массиве А.
 using std::cin;
 using std::cout;
 using std::endl;
