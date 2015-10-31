@@ -7,7 +7,7 @@ using namespace std;
 
 int xorshift128(int x) {
     int t;
-    int a=21,b=34,c=4;
+    int a=13,b=15,c=5;
     t = x ^ (x << a);
     t = t ^ (t >> b);
 
