@@ -51,7 +51,32 @@ int main()
          }
          cout<<""<<endl;
      }
+
+   int k=0;
      cout<<"змейка"<<endl;
+     for (int i=0;i<N;i++)
+     {
+
+
+          if (i%2!=0)
+            {
+
+
+               for (int j=0;j<N;j++)
+                {
+                 cout<<mas[j][i]<<"\t";
+                }
+            }
+            else
+            {
+                for (int j=N-1;j>=0;j++)
+                {
+                    cout<<mas[j][i]<<"\t";
+                }
+            }
+         cout<<""<<endl;
+     }
+
    return 0;
 }
 
