@@ -2,14 +2,14 @@
 #include <clocale>
 #include <math.h>
 #include <stdlib.h>
-
+//b) В программе объявлен массив целых чисел фиксированной "емкости" N. Пользователь вводит массив, затем пользователь вводит число, если такое число есть - то печатается его индекс, если такого числа нет об этом сообщается пользова- телю. При выполнении задания надо написать функцию, осуществляющую поиск в массиве. Она возвращает первый индекс, если таких чисел несколько, и -1 если такого числа нет.
 
 using std::cout;
 using std::cin;
 using std::endl;
 
 
-void initialize (int mas[], int N)
+void initialize (int mas[], int N)//инитиализация массива
 {
 	for (int i=0;i<N;i++)
 	{
@@ -17,12 +17,12 @@ void initialize (int mas[], int N)
 	}
 }
 
-void ink (int &k)
+void ink (int &k)//ввод числа
 {
 	cin>>k;
 }
 
-void poisk (int mas[], int N, int k)
+void poisk (int mas[], int N, int k) //поиск
 {int q=-2;
 	while (q==-2)
 	{
@@ -43,9 +43,9 @@ void poisk (int mas[], int N, int k)
 	const int N=10;
 	int mas[N];
 	int k;
-	initialize (mas,N);
-	ink(k);
-	poisk (mas,N,k);
+	initialize (mas,N);//инитиализация массива
+	ink(k);//ввод числа
+	poisk (mas,N,k);//поиск
 
 
 
