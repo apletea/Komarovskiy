@@ -25,7 +25,7 @@ void poisk (char A[], int N)
     a=A[i];
         for (int q=i+1;q<N;q++)
         {
-            if ((int)a==(int)A[q]){j++;}
+            if ((int)a==(int)A[q]){j++;}// зачем преобразования типов?????
         }
     if (j>mx) {mx=j;qmx=a;g=0;}
     if (j==mx){g++;}
