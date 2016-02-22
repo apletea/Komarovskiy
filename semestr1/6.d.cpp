@@ -27,7 +27,7 @@ void zamena (char A[], int N)
 
     while (!a)
     {
-        if (A[i]=='Z') {A[i]='F';a++;}
+        if (A[i]=='Z') {A[i]='F';a++;}//может проще по break выходить из цикла????
         if (a==0 && i==0){cout<<"букв Z тут нет";a=2;}
         i--;
     }

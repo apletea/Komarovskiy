@@ -15,7 +15,7 @@ bool push(int b[], int &c, int elem)
         return 1;
 }
 
-int pop(int b[], int &c)
+int pop(int b[], int &c) // эта ф-ция выполняет неверные действия!!! Она должна возвращать элемент из вершины!!! 
 {
     if (c == 0){cout<<"Eror № странное задание"<<endl; return 0;}
     else
@@ -30,7 +30,7 @@ int view ( int b[],int c)
     else
         cout<<"пусто"<<endl;
 }
-int view1 (int b[],int c)
+int view1 (int b[],int c)// непонятная ф-ция. Зачем она????
 {
     if(c)
     cout<<"изьятие элемента := "<<b[c-1]<<endl;
