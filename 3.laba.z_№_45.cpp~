@@ -45,18 +45,18 @@ void numssum (int len, int tmplen, int &sum, char * maxslovo, int &maxsumma, cha
             char *cifra ;
             char symbola = i+48;
             cifra = strchr(tmpslovo,symbola);
-            if (cifra!=NULL) {peresum = peresum + i;tmpslovo = cifra+1;}
+            if (cifra!=NULL) {peresum = peresum + i;tmpslovo = cifra;}
             else {break;}
         }
     }
     sum = sum + peresum;
-    if (peresum > maxsumma){strncpy(maxslovo, ps+tmplen,len); maxsumma = peresum; }
+    if (peresum > maxsumma){maxslovo = ps+tmplen; maxsumma = peresum; }
 }
 void maketask1 (char *ps)
 {
     char* maxslovo = new char[255];
     int maxsumma = 0;
-    char sym1[] = ",.!?:;-+()*?%№=_&^$#/|\[]{}<>'~`@ ";
+    char sym1[] = ",.!?:;-+()*?%№=_&^$#/|\[]{}<>'~`@";
     char *tmp = ps;
     int sum = 0,tmplen = 0,len = 0;
     do {
@@ -65,8 +65,8 @@ void maketask1 (char *ps)
         tmplen = tmplen + len + 1;
         tmp = tmp + len + 1;
     } while (*tmp);
-    cout << "сумма цифр в строке: " << sum << endl;
-    cout << "слово с наибольшей суммой цифр  " << maxslovo << endl;
+    cout << "сумма цифр в строке:" << sum << endl;
+    cout << "слово с наибольшей суммой цифр" << maxslovo << endl;
 
 }
 
