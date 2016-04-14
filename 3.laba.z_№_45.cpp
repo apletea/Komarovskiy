@@ -27,6 +27,7 @@ void watchstr(char *ps)
 void strget (char *ps)
 {
     cout << "Введите вашу строку" << endl;
+    cin.get();
     cin.getline(strk, N);
 }
 void numssum (int len, int tmplen, int &sum, char * maxslovo, int &maxsumma, char *ps )
