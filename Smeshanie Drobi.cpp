@@ -5,7 +5,7 @@ using namespace std;
 class Drob{
     private: int kol;int z;int m;
     public:
-        Drob(int n, int d, int c){
+        Drob(int n, int d, int c=0){
             if (d == 0){
                 cout << "divider cant be qual 0" << endl;
             }
@@ -16,7 +16,7 @@ class Drob{
         };
         Drob(int n){
         set(0,1,n);
-        }
+        };
         Drob (Drob const &src){
             this->z=src.get_z();
             this->m=src.get_m();
@@ -39,14 +39,9 @@ class Drob{
             return *this;
         };
         ~Drob(){
+        };
 
-        if (this->z!=0 && this->kol!=0){}
-            delete this;
-
-        }
         bool operator==(const Drob &other){
-            Drob a = *this;
-            Drob b = other;
             return (!(this->kol-other.get_kol()) && !(this->m-other.get_m()) && !(this->z-other.get_z())  );
         };
         ostream &operator<<(ostream &os){
@@ -82,7 +77,7 @@ class Drob{
             return *this;
         };
         Drob minus(Drob tmp){
-            set(this->z*tmp.get_m()-this->m*tmp.get_z(),this->m*tmp.get_m(),this->kol-tmp.get_kol());
+            set(this->z*tmp.m-this->m*tmp.get_z(),this->m*tmp.get_m(),this->kol-tmp.get_kol());
             return *this;
         };
         Drob add(Drob tmp){
