@@ -93,7 +93,7 @@ class Drob{
             set (this->z, this->m, 0);
             return *this;
         };
-        void set(int a, int b,int c){
+        void set(int a, int b,int c){ // Проверьте Set(10,10,0);
             this->z = a/gcf(a,b);
             this->m = b/gcf(a,b);
             this->kol = c;
