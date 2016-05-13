@@ -114,5 +114,7 @@ class Drob{
 int main()
 {
     cout << "Hello world!" << endl;
+    Drob a(1,1),b(2,3),c(1,3);
+    a=b+c; //неработает!!!!! Пошагово проверьте!!!!!
     return 0;
 }
