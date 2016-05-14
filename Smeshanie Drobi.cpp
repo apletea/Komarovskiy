@@ -48,6 +48,7 @@ class Drob{
             os << this->kol << "+" << this->z << "/" << this->m;
             return os;
         };
+
         int get_z() const{
             return this->z;
         };
@@ -97,10 +98,9 @@ class Drob{
             this->z = a/gcf(a,b);
             this->m = b/gcf(a,b);
             this->kol = c;
-            if (a/b >= 1){
-                int u = a/b;
-                this->kol = this->kol + u;
-                this->z = this->z - u*b;
+            while (this->z-this->m >= 0){
+               this->z = this->z-this->m;
+                this->kol = this->kol+1;
             }
         };
         int gcf(int a, int b){
@@ -113,6 +113,8 @@ class Drob{
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    Drob a(1,3,0),b(2,3,1);
+    a = a + b;
+    cout<< a.get_kol() << "+"<<a.get_z()<<"/"<<a.get_m();
     return 0;
 }
